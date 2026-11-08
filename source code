@@ -1,6 +1,8 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   button { font-size: 18px; padding: 10px 20px; }
   #shop button { font-size: 14px; padding: 8px 12px; margin: 3px 0; }
+  canvas { touch-action: manipulation; }
 </style>
 <canvas id="c" width="288" height="400"></canvas>
 <p id="msg"></p>
@@ -114,7 +116,7 @@ function makeGroup(zone) {
 
 const describe = f => f.items.length ? `${f.name} (${f.items.join(', ')})` : f.name;
 
-// the exit tile (4,1) is the only way to the exit, so the boss can't be skipped
+// tile (4,1) is the only way to the exit, so the boss can't be skipped
 const enemies = [
   [1, 6], [6, 8], [3, 8],
   [4, 4], [7, 4], [3, 5], [6, 3],
